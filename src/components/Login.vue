@@ -26,7 +26,7 @@
         },
         checked: true,
         loginForm: {
-          username: 'tang',
+          username: 'admin',
           password: '123'
         },
         loading: false

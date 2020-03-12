@@ -6,7 +6,6 @@ import Log from '@/components/Log'
 import Map from '@/components/Map'
 import NumMana from '@/components/NumMana'
 import UserMana from '@/components/UserMana'
-import SystemSetup from '@/components/SystemSetup'
 import BlackList from  '@/components/BlackList'
 import Chat from '@/components/chat/Chat'
 
@@ -62,7 +61,7 @@ export default new Router({
       name: '数据管理',
       children: [
         {
-          path: '/DataQuery/Number',
+          path: '/BasicData/Number',
           name: '取号查询',
           component: NumMana,
           meta: {
@@ -70,12 +69,13 @@ export default new Router({
           }
         },{
           path: '/DataQuery/BlackList',
-          name: '黑名单',
+          name: '布控名单',
           component: BlackList,
           meta: {
             keepAlive: true
           }
         },
+    
 
       ]
     },{
@@ -103,19 +103,6 @@ export default new Router({
           component: Log
         }
       ]
-    }, {
-      path: '/home',
-      component: Home,
-      name: '系统设置',
-      iconCls: 'fa fa-bar-chart',
-      children: [
-        {
-          path: '/systemSetup',
-          iconCls: 'fa  fa-gear',
-          name: '系统设置',
-          component: SystemSetup
-        }
-      ]
-    }
+    },
   ]
 })
